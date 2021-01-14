@@ -1,0 +1,20 @@
+{
+  "name": "faq-accordion",
+  "version": "1.0.0",
+  "description": "A FAQ accordion component, challenge from FrontendMentor",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "faq",
+    "accordion",
+    "component",
+    "frontendmentor"
+  ],
+  "author": "Bruno Mazza",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
