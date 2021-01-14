@@ -1,64 +1,113 @@
 .accordion {
   background-color: #ffffff;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   position: relative;
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-radius: 2rem;
   box-shadow: $main-shadow;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    width: 65vw;
+    min-height: 70vh;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 5rem;
+    align-items: center;
+  }
 
   .accordion-illustration-wrapper {
-    margin-bottom: 5rem;
+    transform: translateY(-10rem);
+
+    @media (min-width: 768px) {
+      transform: translateY(0);
+    }
 
     .accordion-illustration {
       display: block;
       max-width: 100%;
       height: auto;
-    }
-  }
+      margin: 0 auto;
 
-  h1 {
-    font-size: 2.6rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-
-  .accordion-content {
-    input {
-      display: none;
-    }
-
-    label {
-      display: block;
-      padding: 8px 22px;
-      margin: 0 0 1px 0;
-      cursor: pointer;
-      border-radius: 3px;
-      color: $text-primary-dark;
-      transition: all 0.2s ease-in-out;
-      font-size: 1.4rem;
-    }
-
-    label:hover {
-      font-weight: 700;
-    }
-
-    .content {
-      padding: 1rem 2.5rem;
-      margin: 0 0 1px 0;
-
-      p {
-        font-size: 1.2rem;
+      @media (min-width: 768px) {
+        width: 50rem;
+        transform: translateX(-15rem);
       }
     }
   }
 
-  input + label + .content {
-    display: none;
-  }
+  .accordion-content {
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2.5rem;
 
-  input:checked + label + .content {
-    display: block;
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+    .accordion-wrapper {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 0.1rem;
+        background-color: $divider-color;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 0.5rem;
+      }
+
+      input {
+        display: none;
+      }
+
+      label {
+        display: block;
+        padding: 1rem 0;
+        cursor: pointer;
+        color: $text-primary-dark;
+        transition: all 0.3s ease;
+        font-size: 1.6rem;
+      }
+
+      label:hover {
+        font-weight: 700;
+      }
+
+      .content {
+        padding: 1rem 0;
+        margin: 0 0 1px 0;
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      input + label + .content {
+        display: none;
+      }
+
+      input:checked + label + .content {
+        display: block;
+      }
+
+      input:checked + .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    .arrow-icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
