@@ -1,12 +1,26 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    $background-soft-violet,
+    $background-soft-blue
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
 }

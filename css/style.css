@@ -1,3 +1,8 @@
+/* Text */
+/* Background */
+/* Dividers */
+/* Typography */
+/* Effects */
 *,
 *::before,
 *::after {
@@ -8,3 +13,54 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif; }
+
+.accordion {
+  background-color: #ffffff;
+  width: 80vw;
+  height: auto;
+  position: relative;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .accordion .accordion-illustration-wrapper {
+    margin-bottom: 5rem; }
+    .accordion .accordion-illustration-wrapper .accordion-illustration {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+  .accordion h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem; }
+  .accordion .accordion-content input {
+    display: none; }
+  .accordion .accordion-content label {
+    display: block;
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #1d1e35;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.4rem; }
+  .accordion .accordion-content label:hover {
+    font-weight: 700; }
+  .accordion .accordion-content .content {
+    padding: 1rem 2.5rem;
+    margin: 0 0 1px 0; }
+    .accordion .accordion-content .content p {
+      font-size: 1.2rem; }
+  .accordion input + label + .content {
+    display: none; }
+  .accordion input:checked + label + .content {
+    display: block; }
