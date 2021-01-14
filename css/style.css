@@ -73,7 +73,8 @@ body {
       height: 0.1rem;
       background-color: #e7e7e9; }
     .accordion .accordion-content .accordion-wrapper:not(:last-child) {
-      padding-bottom: 0.5rem; }
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem; }
     .accordion .accordion-content .accordion-wrapper input {
       display: none; }
     .accordion .accordion-content .accordion-wrapper label {
@@ -83,8 +84,8 @@ body {
       color: #1d1e35;
       transition: all 0.3s ease;
       font-size: 1.6rem; }
-    .accordion .accordion-content .accordion-wrapper label:hover {
-      font-weight: 700; }
+      .accordion .accordion-content .accordion-wrapper label:hover {
+        color: #f47c57; }
     .accordion .accordion-content .accordion-wrapper .content {
       padding: 1rem 0;
       margin: 0 0 1px 0; }
@@ -92,10 +93,12 @@ body {
         font-size: 1.4rem; }
     .accordion .accordion-content .accordion-wrapper input + label + .content {
       display: none; }
+    .accordion .accordion-content .accordion-wrapper input:checked + label {
+      font-weight: 700; }
+      .accordion .accordion-content .accordion-wrapper input:checked + label:hover {
+        color: #1d1e35; }
     .accordion .accordion-content .accordion-wrapper input:checked + label + .content {
       display: block; }
-    .accordion .accordion-content .accordion-wrapper input:checked + .arrow-icon {
-      transform: rotate(180deg); }
   .accordion .accordion-content .arrow-icon {
     position: absolute;
     right: 0;
