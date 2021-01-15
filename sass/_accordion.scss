@@ -79,14 +79,30 @@
         margin-bottom: 1rem;
       }
 
+      input {
+        display: none;
+      }
+
+      input:checked ~ .content {
+        display: block;
+      }
+
+      input:checked ~ .label-wrapper .accordion-label {
+        font-weight: 700;
+
+        &:hover {
+          color: $text-primary-dark;
+        }
+      }
+
+      input:checked ~ .label-wrapper .arrow-icon {
+        transform: rotate(180deg);
+      }
+
       .label-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        input {
-          display: none;
-        }
 
         .accordion-label {
           display: block;
@@ -112,7 +128,7 @@
       }
 
       .content {
-        padding: .25rem 0;
+        padding: 0.25rem 0;
         margin: 0 0 1px 0;
         display: none;
 
@@ -124,26 +140,6 @@
             font-size: 1.4rem;
           }
         }
-      }
-
-      input {
-        display: none;
-      }
-
-      input:checked ~ .content {
-        display: block;
-      }
-
-      input:checked ~ .label-wrapper .accordion-label {
-        font-weight: 700;
-
-        &:hover {
-          color: $text-primary-dark;
-        }
-      }
-
-      input:checked ~ .label-wrapper .arrow-icon {
-        transform: rotate(180deg);
       }
     }
   }
