@@ -86,39 +86,44 @@ body {
     .accordion .accordion-content .accordion-wrapper:not(:last-child) {
       padding-bottom: 0.5rem;
       margin-bottom: 1rem; }
-    .accordion .accordion-content .accordion-wrapper input {
-      display: none; }
-    .accordion .accordion-content .accordion-wrapper label {
-      display: block;
-      padding: 1rem 0;
-      cursor: pointer;
-      color: #1d1e35;
-      transition: all 0.3s ease;
-      font-size: 1.2rem; }
-      @media (min-width: 768px) {
-        .accordion .accordion-content .accordion-wrapper label {
-          text-align: left;
-          font-size: 1.6rem; } }
-      .accordion .accordion-content .accordion-wrapper label:hover {
-        color: #f47c57; }
-    .accordion .accordion-content .accordion-wrapper .content {
-      padding: 1rem 0;
-      margin: 0 0 1px 0; }
-      .accordion .accordion-content .accordion-wrapper .content p {
+    .accordion .accordion-content .accordion-wrapper .label-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .accordion .accordion-content .accordion-wrapper .label-wrapper input {
+        display: none; }
+      .accordion .accordion-content .accordion-wrapper .label-wrapper .accordion-label {
+        display: block;
+        padding: 1rem 0;
+        cursor: pointer;
+        color: #1d1e35;
+        transition: all 0.3s ease;
         font-size: 1.2rem; }
+        @media (min-width: 768px) {
+          .accordion .accordion-content .accordion-wrapper .label-wrapper .accordion-label {
+            text-align: left;
+            font-size: 1.6rem; } }
+        .accordion .accordion-content .accordion-wrapper .label-wrapper .accordion-label:hover {
+          color: #f47c57; }
+      .accordion .accordion-content .accordion-wrapper .label-wrapper .arrow-icon {
+        transition: all 0.3s ease; }
+    .accordion .accordion-content .accordion-wrapper .content {
+      padding: .25rem 0;
+      margin: 0 0 1px 0;
+      display: none; }
+      .accordion .accordion-content .accordion-wrapper .content p {
+        font-size: 1.2rem;
+        line-height: 1.5; }
         @media (min-width: 768px) {
           .accordion .accordion-content .accordion-wrapper .content p {
             font-size: 1.4rem; } }
-    .accordion .accordion-content .accordion-wrapper input + label + .content {
+    .accordion .accordion-content .accordion-wrapper input {
       display: none; }
-    .accordion .accordion-content .accordion-wrapper input:checked + label {
-      font-weight: 700; }
-      .accordion .accordion-content .accordion-wrapper input:checked + label:hover {
-        color: #1d1e35; }
-    .accordion .accordion-content .accordion-wrapper input:checked + label + .content {
+    .accordion .accordion-content .accordion-wrapper input:checked ~ .content {
       display: block; }
-  .accordion .accordion-content .arrow-icon {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(-50%, -50%); }
+    .accordion .accordion-content .accordion-wrapper input:checked ~ .label-wrapper .accordion-label {
+      font-weight: 700; }
+      .accordion .accordion-content .accordion-wrapper input:checked ~ .label-wrapper .accordion-label:hover {
+        color: #1d1e35; }
+    .accordion .accordion-content .accordion-wrapper input:checked ~ .label-wrapper .arrow-icon {
+      transform: rotate(180deg); }
