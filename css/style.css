@@ -36,14 +36,22 @@ body {
   grid-template-columns: 1fr; }
   @media (min-width: 768px) {
     .accordion {
-      width: 65vw;
-      min-height: 70vh;
+      width: 95vw;
       height: auto;
       grid-template-columns: repeat(2, 1fr);
       padding: 3rem 5rem;
       align-items: center; } }
+  @media (min-width: 1440px) {
+    .accordion {
+      width: 65vw;
+      min-height: 70vh;
+      height: auto;
+      padding: 3rem 5rem; } }
   .accordion .accordion-illustration-wrapper {
-    transform: translateY(-10rem); }
+    transform: translateY(-5rem); }
+    @media (min-width: 375px) {
+      .accordion .accordion-illustration-wrapper {
+        transform: translateY(-10rem); } }
     @media (min-width: 768px) {
       .accordion .accordion-illustration-wrapper {
         transform: translateY(0); } }
@@ -55,6 +63,9 @@ body {
       @media (min-width: 768px) {
         .accordion .accordion-illustration-wrapper .accordion-illustration {
           width: 50rem;
+          transform: translateX(-10rem); } }
+      @media (min-width: 1440px) {
+        .accordion .accordion-illustration-wrapper .accordion-illustration {
           transform: translateX(-15rem); } }
   .accordion .accordion-content h1 {
     font-size: 2.6rem;
@@ -83,14 +94,21 @@ body {
       cursor: pointer;
       color: #1d1e35;
       transition: all 0.3s ease;
-      font-size: 1.6rem; }
+      font-size: 1.2rem; }
+      @media (min-width: 768px) {
+        .accordion .accordion-content .accordion-wrapper label {
+          text-align: left;
+          font-size: 1.6rem; } }
       .accordion .accordion-content .accordion-wrapper label:hover {
         color: #f47c57; }
     .accordion .accordion-content .accordion-wrapper .content {
       padding: 1rem 0;
       margin: 0 0 1px 0; }
       .accordion .accordion-content .accordion-wrapper .content p {
-        font-size: 1.4rem; }
+        font-size: 1.2rem; }
+        @media (min-width: 768px) {
+          .accordion .accordion-content .accordion-wrapper .content p {
+            font-size: 1.4rem; } }
     .accordion .accordion-content .accordion-wrapper input + label + .content {
       display: none; }
     .accordion .accordion-content .accordion-wrapper input:checked + label {
